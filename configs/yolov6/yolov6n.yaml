@@ -1,6 +1,6 @@
 settings:
   batch_size: 1
-  test_title: yolov5n
+  test_title: yolov6n
   input_hw: [384, 640]
   half: True
   auto: False
@@ -11,7 +11,7 @@ settings:
 models: 
   model1:
     model_type: yolov5
-    engine_file: /home/laughing/codes/yolov5-q/weights/yolov5n.engine
+    engine_file: /d/codes/YOLOv6/weights/yolov6n.engine
     conf_thres: 0.4
     iou_thres: 0.4
     filter: null
@@ -19,7 +19,7 @@ models:
 
   model2:
     model_type: yolov5
-    engine_file: /home/laughing/codes/yolov5-q/weights/yolov5n.engine
+    engine_file: /d/codes/YOLOv6/weights/yolov6n.engine
     conf_thres: 0.4
     iou_thres: 0.4
     filter: null
@@ -27,7 +27,7 @@ models:
 
   model3:
     model_type: yolov5
-    engine_file: /home/laughing/codes/yolov5-q/weights/yolov5n.engine
+    engine_file: /d/codes/YOLOv6/weights/yolov6n.engine
     conf_thres: 0.4
     iou_thres: 0.4
     filter: null
@@ -35,7 +35,7 @@ models:
 
   model4:
     model_type: yolov5
-    engine_file: /home/laughing/codes/yolov5-q/weights/yolov5n.engine
+    engine_file: /d/codes/YOLOv6/weights/yolov6n.engine
     conf_thres: 0.4
     iou_thres: 0.4
     filter: null
@@ -43,7 +43,7 @@ models:
 
   model5:
     model_type: yolov5
-    engine_file: /home/laughing/codes/yolov5-q/weights/yolov5n.engine
+    engine_file: /d/codes/YOLOv6/weights/yolov6n.engine
     conf_thres: 0.4
     iou_thres: 0.4
     filter: null

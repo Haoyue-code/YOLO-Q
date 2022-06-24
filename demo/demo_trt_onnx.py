@@ -51,6 +51,7 @@ if __name__ == "__main__":
     test_batch = settings.batch_size
     test_model = settings.test_title
     test_size = settings.input_hw
+    auto = settings.auto
 
     # logger.add("trt15.log", format="{message}")
     # logger.add("trt1.log", format="{message}")
@@ -60,7 +61,7 @@ if __name__ == "__main__":
     predictor = TRTPredictor(
         img_hw=test_size,
         models=model,
-        auto=True,
+        auto=auto,
         pre_multi=pre_multi,
         infer_multi=infer_multi,
         post_multi=post_multi,
@@ -75,7 +76,7 @@ if __name__ == "__main__":
 
     meter = MeterBuffer(window_size=500)
 
-    cap = cv2.VideoCapture("/e/1.avi")
+    cap = cv2.VideoCapture("/home/laughing/Videos/test.mp4")
     frames = warmup_frames + test_frames
     pbar = tqdm(range(frames), total=frames)
     for frame_num in pbar:

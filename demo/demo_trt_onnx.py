@@ -52,6 +52,7 @@ if __name__ == "__main__":
     test_model = settings.test_title
     test_size = settings.input_hw
     auto = settings.auto
+    half = settings.half
 
     # logger.add("trt15.log", format="{message}")
     # logger.add("trt1.log", format="{message}")
@@ -65,6 +66,7 @@ if __name__ == "__main__":
         pre_multi=pre_multi,
         infer_multi=infer_multi,
         post_multi=post_multi,
+        half=half,
     )
 
     if predictor.multi_model:

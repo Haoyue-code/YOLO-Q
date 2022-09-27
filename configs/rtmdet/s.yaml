@@ -1,0 +1,50 @@
+settings:
+  batch_size: 1
+  test_title: rtmdet-s
+  input_hw: [384, 640]
+  half: True
+  auto: False
+  pre_multi: False
+  infer_multi: False
+  post_multi: False
+
+models: 
+  model1:
+    model_type: yolov5
+    engine_file: /home/laughing/codes/mmdetection/weights/rtmdet-s.engine
+    conf_thres: 0.4
+    iou_thres: 0.4
+    filter: null
+    names: ./configs/coco.names
+
+  # model2:
+  #   model_type: yolov5
+  #   engine_file: /home/laughing/codes/mmdetection/weights/rtmdet-s.engine
+  #   conf_thres: 0.4
+  #   iou_thres: 0.4
+  #   filter: null
+  #   names: ./configs/coco.names
+  #
+  # model3:
+  #   model_type: yolov5
+  #   engine_file: /home/laughing/codes/mmdetection/weights/rtmdet-s.engine
+  #   conf_thres: 0.4
+  #   iou_thres: 0.4
+  #   filter: null
+  #   names: ./configs/coco.names
+  #
+  # model4:
+  #   model_type: yolov5
+  #   engine_file: /home/laughing/codes/mmdetection/weights/rtmdet-s.engine
+  #   conf_thres: 0.4
+  #   iou_thres: 0.4
+  #   filter: null
+  #   names: ./configs/coco.names
+  #
+  # model5:
+  #   model_type: yolov5
+  #   engine_file: /home/laughing/codes/mmdetection/weights/rtmdet-s.engine
+  #   conf_thres: 0.4
+  #   iou_thres: 0.4
+  #   filter: null
+  #   names: ./configs/coco.names

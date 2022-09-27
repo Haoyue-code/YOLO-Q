@@ -33,8 +33,8 @@ class TRT_Model:
     def __call__(self, img):
         # assert img.shape == self.bindings['images'].shape, (img.shape, self.bindings['images'].shape)
         self.binding_addrs['images'] = int(img.data_ptr())
-        self.context.execute_v2([self.binding_addrs['images'], self.binding_addrs['output']])
+        self.context.execute_v2([self.binding_addrs['images'], self.binding_addrs['output0']])
         # self.context.execute_v2(list(self.binding_addrs.values()))
         # 没有拷贝到cpu，数据依旧在cuda, 可供torch操作
-        y = self.bindings['output'].data
+        y = self.bindings['output0'].data
         return y

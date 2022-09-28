@@ -1,27 +1,27 @@
 import matplotlib.pyplot as plt
 
 yolov5 = dict(
-    n=dict(speed=0.9, mAP=28.0),
-    s=dict(speed=1.2, mAP=37.4),
-    m=dict(speed=2.1, mAP=45.4),
-    l=dict(speed=3.8, mAP=49.0),
-    x=dict(speed=5.9, mAP=50.7),
+    N=dict(speed=0.9, mAP=28.0),
+    S=dict(speed=1.2, mAP=37.4),
+    M=dict(speed=2.1, mAP=45.4),
+    L=dict(speed=3.8, mAP=49.0),
+    X=dict(speed=5.9, mAP=50.7),
 )
 
 yolov6 = dict(
-    n=dict(speed=0.8, mAP=35.9),
-    t=dict(speed=1.2, mAP=40.3),
-    s=dict(speed=1.5, mAP=43.5),
-    m=dict(speed=2.9, mAP=48.5),
-    l=dict(speed=4.8, mAP=52.5),
+    N=dict(speed=0.8, mAP=35.9),
+    T=dict(speed=1.2, mAP=40.3),
+    S=dict(speed=1.5, mAP=43.5),
+    M=dict(speed=2.9, mAP=48.5),
+    L=dict(speed=4.8, mAP=52.5),
 )
 
 rtmdet = dict(
-    t=dict(speed=1.4, mAP=40.9),
-    s=dict(speed=1.7, mAP=44.5),
-    m=dict(speed=3.1, mAP=49.1),
-    l=dict(speed=5.5, mAP=51.3),
-    x=dict(speed=8.5, mAP=52.6),
+    T=dict(speed=1.4, mAP=40.9),
+    S=dict(speed=1.7, mAP=44.5),
+    M=dict(speed=3.1, mAP=49.1),
+    L=dict(speed=5.5, mAP=51.3),
+    X=dict(speed=8.5, mAP=52.6),
 )
 
 plt.plot(
@@ -95,9 +95,9 @@ for k, v in rtmdet.items():
     )
 
 plt.grid(alpha=0.5)
-plt.xlabel("TensorRT-FP16 Latency(ms)")
+plt.xlabel("TensorRT-FP16 Latency(ms) on RTX3060")
 plt.ylabel("COCO AP val(%)")
 plt.legend(loc="lower right")
 
-# plt.show()
-plt.savefig("result_new.png")
+plt.show()
+# plt.savefig("result_new.png")

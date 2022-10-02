@@ -8,6 +8,10 @@ yolov5 = dict(
     X=dict(speed=5.9, mAP=50.7),
 )
 
+yolov5_6 = dict(
+    M=dict(speed=2.3, mAP=46.5),
+)
+
 yolov6 = dict(
     N=dict(speed=0.8, mAP=35.9),
     T=dict(speed=1.2, mAP=40.3),
@@ -52,6 +56,16 @@ plt.plot(
     color="#2ca02c",
 )
 
+plt.plot(
+    [y5["speed"] for t, y5 in yolov5_6.items()],
+    [y5["mAP"] for t, y5 in yolov5_6.items()],
+    "p-",
+    linewidth=2,
+    markersize=8,
+    label="yolov5-6",
+    color="#d62728",
+)
+
 for k, v in yolov5.items():
     plt.text(
         v["speed"],
@@ -92,6 +106,20 @@ for k, v in rtmdet.items():
         horizontalalignment="right",
         # rotation=45,
         color="#2ca02c",
+    )
+
+for k, v in yolov5_6.items():
+    plt.text(
+        v["speed"],
+        v["mAP"],
+        k,
+        fontsize=15,
+        # style="italic",
+        weight="light",
+        # verticalalignment="center",
+        horizontalalignment="right",
+        # rotation=45,
+        color="#d62728",
     )
 
 plt.grid(alpha=0.5)

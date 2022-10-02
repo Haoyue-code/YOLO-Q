@@ -12,7 +12,7 @@ yolov6 = dict(
     N=dict(speed=0.8, mAP=35.9),
     T=dict(speed=1.2, mAP=40.3),
     S=dict(speed=1.5, mAP=43.5),
-    M=dict(speed=2.9, mAP=48.5),
+    M=dict(speed=2.9, mAP=49.5),
     L=dict(speed=4.8, mAP=52.5),
 )
 

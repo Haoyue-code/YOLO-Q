@@ -189,6 +189,7 @@ class Predictor(object):
         conf_thres = getattr(model, 'conf_thres', 0.4)
         iou_thres = getattr(model, 'iou_thres', 0.5)
         classes = getattr(model, 'filter', None)
+        # preds = torch.permute(preds, (0, 2, 1))
         outputs = nms[model.model_type](
             preds, conf_thres, iou_thres, classes=classes, agnostic=False
         )
